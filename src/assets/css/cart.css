@@ -1,0 +1,139 @@
+*{
+  margin: 0;;
+  padding: 0;
+}
+
+.top-title{
+  margin-top: 24px;
+  margin-left: 10%;
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.cart{
+  margin: 10px auto;
+  width: 90%;
+  position: relative;
+}
+.cart .content{
+  border: 1px solid lightgray;
+  padding: 5%;
+  position: relative;
+
+}
+
+.cart .content .all-check {
+  margin-bottom: 10px;
+}
+
+.cart .content .good {
+  margin-bottom: 50px;
+}
+
+
+
+.cart .content .good li{
+  display: -webkit-flex; /* Safari */
+  justify-content:space-between;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.cart .content .good .photo{
+  width: 80px;
+  height: 80px;
+}
+.cart .content .good li ul {
+  height: 80px;
+}
+
+.cart .content .good li ul span{
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+.cart .content .good li ul li{
+  line-height: 24px;
+}
+
+.cart .content .good li ul .old{
+  text-decoration: line-through;
+}
+.cart .content .good li ul .new{
+  font-size: 18px;
+  color: red;
+}
+
+
+.cart .content .good .distance:nth-child(n+2){
+  margin-top: 40px;
+}
+
+
+.cart .content .good button{
+  border: none;
+  background-color: #ffffff;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cart .interest{
+  margin-top: 20px;
+}
+
+
+.cart .interest .title span{
+  float: left;
+  width: 20%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.cart .interest .title div{
+  border-bottom: 1px solid black;
+  float: left;
+  width: 40%;
+  height: 15px;
+  text-decoration: line-through;
+}
+
+
+
+
+
+.cart .interest .nei{
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cart .interest .nei li{
+  margin-top: 20px;
+  width: 45%;
+}
+.cart .interest .nei li:last-child{
+  margin-bottom: 60px;
+}
+.cart .interest .nei li img{
+  width: 122px;
+  height: 122px;
+}
+.cart .interest .nei li div{
+  width: 122px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+.cart .interest .nei li div p{
+  line-height: 30px;
+}

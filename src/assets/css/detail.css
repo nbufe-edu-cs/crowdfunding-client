@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.detail{
+  background-color: #f2f2f2;
+}
+
+.detail .left{
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: -15px;
+  fill:black;
+}
+
+.detail .cart .cart-logo{
+  width: 30px;
+  height: 30px;
+}
+
+
+.detail .container{
+  padding-top: 20px;
+  background-color: #fff;
+}
+
+.detail .information{
+  width: 90%;
+  margin: 0 auto;
+  padding: 5%;
+}
+.detail .information .price{
+  line-height: 40px;
+  font-weight: bolder;
+  color: red;
+  font-size: 20px;
+}
+.van-cell{
+  margin: 15px auto;
+   background-color: red;
+}
+
+.detail .img ul{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+}
+.detail .img ul li:last-child {
+  padding-bottom: 70px;
+}
+
+.detail .choose .in{
+  padding: 16px 20px;
+}
+.detail .choose .in .top{
+  display: flex;
+}
+.detail .choose .in .top img{
+  height: 100px;
+  width: 100px;
+}
+.detail .choose .in .top div{
+  margin-left: 10px;
+}
+
+.detail .choose .in .top div  .price{
+  color: red;
+  font-size: 20px;
+}
+.detail .choose .in .top div .num{
+  font-size: 12px;
+  color: #000000;
+  margin-top: 40px;
+}
+
+.detail .choose .in .center{
+  margin-top: 10px;
+  border-top: 3px solid lightgray;
+  border-bottom: 3px solid lightgray;
+
+}
+.detail .choose .in .center p{
+  line-height: 40px;
+}
+.detail .choose .in .center button{
+  height: 32px;
+  width: 120px;
+  background-color: #8c8c8c;
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.detail .choose .in .footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.detail .choose .in .btn{
+  width: 100%;
+  display: flex;
+}
+.detail .choose .in .btn button{
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+}
+.detail .choose .in .btn button:first-child{
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.detail .choose .in .btn button:last-child{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.detail .choose .in .btn button:first-child{
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.detail .choose .in .btn button:last-child{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.detail footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  height: 50px;
+}
+.detail footer button{
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+}
+.detail footer button:first-child{
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.detail footer button:last-child{
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.detail .comment{
+  background-color: white;
+  padding:  20px 5%;
+}
+.detail .comment ul li{
+  padding-bottom: 20px;
+  border-bottom: 1px solid grey;
+  padding-top: 20px;
+}
+.detail .comment ul li:last-child{
+  margin-bottom: 60px;
+}
+.detail .comment ul li .comment-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.detail .comment ul li .a{
+  display: flex;
+}
+
+.detail .comment ul li .a img{
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+.detail .comment ul li .time{
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.detail .comment ul li p{
+  margin-top: 5px;
+  width: 100%;
+  text-indent: 2em;
+}
+
+
+
+.detail .interest-title{
+  font-size: 24px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 5%;
+}
+
+.detail .interest{
+  background-color: white;
+  width: 90%;
+  text-align: center;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.detail .interest li{
+  margin-top: 25px;
+  width: 45%;
+}
+.detail .interest li:last-child{
+  margin-bottom: 60px;
+}
+.detail .interest li img{
+  width: 122px;
+  height: 122px;
+}
+.detail .interest li div{
+  width: 122px;
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+.detail .interest li div p{
+  line-height: 30px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.adminLogin{
+  display: flex;
+  display: -webkit-flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.adminLogin .title{
+  font-size: 24px;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.adminLogin .user{
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.adminLogin .user input{
+  width: 70%;
+  border: none;
+  border-bottom: 1px black solid;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+.adminLogin button{
+  width: 235px;
+  height: 48px;
+  background-color: #666666;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+}

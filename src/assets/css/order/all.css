@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.all .content{
+  width: 90%;
+  margin: 0 auto;;
+}
+
+.all .content .good .good-content{
+  width: 100%;
+  height: 120px;
+  margin-top: 20px;
+  background-color: #f3f3f3;
+  position: relative;
+  display: -webkit-flex; /* Safari */
+  justify-content:flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+.all .content .good .good-content:last-child{
+  margin-bottom: 70px;
+}
+.all .content .good .good-content  img{
+  height: 100px;
+  width: 100px;
+  margin-left: 5%;
+}
+
+
+.all  .good .detail{
+  height: 100px;
+  width: 50%;
+  margin-left: 8%;
+  font-size: 14px;
+}
+.all .content .good .detail  .name{
+  font-size: 18px;
+  line-height: 25px;
+}
+.all .content .good .detail li{
+  color: #8c8c8c;
+  line-height: 24px;
+}
+.all .content .good .detail li span{
+  float: left;
+}
+
+.all .content .good .price{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  font-size: 16px;
+  font-weight: bolder;
+  color: red;
+}
+
+.all .content .comment{
+  border: none;
+  height: 48px;
+  width: 90%;
+  position: fixed;
+  left: 5%;
+  bottom: 10px;
+  background-color: #666666;
+  color: white;
+  border-radius: 5px;
+}
+
+.all .content .good .status{
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  font-size: 16px;
+}

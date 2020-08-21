@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.my{
+  padding: 5%;
+  margin: 10px auto;
+  text-align: center;
+}
+.my .photo img{
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+}
+.my .name{
+  margin-top: 20px;
+}
+.my .userId{
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.my  .do{
+  display: -webkit-flex; /* Safari */
+  justify-content:space-around;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.my  .do img{
+  height: 50px;
+  width: 50px;
+  margin-bottom: 8px;
+}
+.my .foot ul{
+  margin-top:20px;
+  list-style: none;
+  text-align:left;
+}
+.my .foot ul li{
+  border: 2px solid gray;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+.my .foot ul li:first-child{
+  border-bottom:none
+}
+.my .foot ul li:last-child{
+  border-top:none;
+  margin-bottom: 60px;
+}
