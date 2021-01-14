@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.wxLogin{
+  background-image: url("./../../../../static/bg.png");
+  width: 100%;
+  text-align: center;
+}
+
+.wxLogin .return{
+  position: absolute;
+  top:10px;
+  left: 10px;
+}
+
+.wxLogin img{
+  margin-top: 60px;
+}
+
+
+.wxLogin p{
+  margin-top: 60px;
+  font-size: 18px;
+  line-height: 50px;
+}
+.wxLogin button{
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+}

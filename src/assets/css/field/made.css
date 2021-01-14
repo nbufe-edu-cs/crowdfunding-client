@@ -1,0 +1,35 @@
+* {
+  margin : 0;
+  padding: 0;
+}
+
+.made {
+  background-color: #f7f7f7;
+}
+
+.made .message {
+  padding-bottom  : 40px;
+  background-color: white;
+}
+
+.made .message img {
+  width : 100%;
+  height: 200px;
+}
+
+.made .message .desc {
+  text-indent: 2em;
+  padding    : 0 1% 0 1%;
+}
+
+.made .message .price {
+  float       : right;
+  margin-right: 2%;
+  font-size   : 18px;
+  line-height : 40px;
+  color       : teal;
+}
+
+.hide {
+  display: none;
+}

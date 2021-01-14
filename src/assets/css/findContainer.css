@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.findContainer{
+  width: 100%;
+  position: relative;
+}
+.search_d{
+  width: 100%;
+  align-items: center;
+  padding-top: 6px;
+}
+
+
+/*.findContainer .van-search__content{*/
+  /*height: 30px;*/
+  /*display: block;*/
+  /*background-color:#ffffff;*/
+/*}*/
+
+/*.findContainer .van-search .van-cell{*/
+  /*margin-top: 5px;*/
+  /*padding:0;*/
+
+/*}*/
+/*.findContainer .van-search {*/
+  /*height: 40px;*/
+  /*width: 75%;*/
+  /*z-index: 200;*/
+  /*left: 10%;*/
+  /*position: absolute;*/
+  /*top: 2px;*/
+  /*background-color:#f7f7f7;*/
+/*}*/
+
+.findContainer .my-nav{
+  font-size: 14px;
+  background-color: #fff;
+  height: 40px;
+  overflow: visible;
+
+
+}
+.findContainer .my-nav a{
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.findContainer .container .good li{
+  width: 95%;
+  height: 110px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+
+.findContainer .container .good img{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.findContainer .container .good .title{
+  font-size: 18px;
+  width: 100%;
+}
+
+.findContainer .container .good .right{
+  text-align: center;
+}
+.findContainer .container .good .right .right-bottom{
+  display: flex;
+
+}
+.findContainer .container .good .right .right-bottom .right-bottom-left {
+  width: 60%;
+}
+
+.findContainer .container .good .right .right-bottom .right-bottom-right {
+  width: 40%;
+}
+
+
+

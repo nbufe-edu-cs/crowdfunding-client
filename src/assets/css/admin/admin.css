@@ -1,57 +1,38 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  height: 200px;
 }
 
 .admin .container{
-  display: flex;
-  display: -webkit-flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction: column;
-  -webkit-box-orient: vertical;
+  width: 86%;
+  margin: 10px auto;
+  background-color: #E4E4E4;
+  padding: 10px 2%;
+  height: 250px;
 }
 
-.admin .container  ul li {
-  margin-bottom: 20px;
+.admin .container .title{
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.admin .container ul{
+  margin-left: 10px;
+  font-size: 12px;
 }
 
-.admin .container  ul li input{
-  border: none;
-  border-bottom: 1px black solid;
-  height: 40px;
-  line-height: 40px;
-}
-.admin .container .b{
-  width: 90%;
-  border: none;
-  height: 48px;
-  border-radius: 48px;
-  margin-top: 50px;
-}
-
-
-.admin .container .add-img{
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-  background-color: #f2f2f2;
-
-}
-.admin .container .add-img .add{
-  font-size: 80px;
-  height: 100px;
-  width: 100px;
-  display: flex;
-  display: -webkit-flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction: column;
-  color: #666666;
-}
-
-.nut-imagepicker{
+.admin .submit{
+  width: 100%;
   text-align: center;
 }
-
-
+.admin .submit button{
+  background-color: #354138;
+  border-radius: 10px;
+  border: none;
+  height: 48px;
+  width: 120px;
+  color: white;
+}

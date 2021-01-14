@@ -1,13 +1,17 @@
 <template>
-  <div class="uncomment">
+  <div class="uncomment" :style="{ height: windowHeight + 'px' }">
 
-    <nav-bar :name="name"></nav-bar>
+    <van-nav-bar
+      title="待评论订单"
+      left-arrow
+      @click-left="comment"
+    />
 
     <div class="content">
       <ul class="good">
         <li class="good-content">
           <img src="#">
-          <ul class="detail" >
+          <ul class="detail" @click="comment">
             <span class="name">商品名称</span>
             <li><span>规格：</span><p>5kg/箱</p></li>
             <li><span>单价：</span><p>￥29.9/箱</p></li>
@@ -27,7 +31,11 @@
         </li>
 
       </ul>
-      <button class="comment" @click="comment">评论</button>
+      <van-goods-action>
+        <van-goods-action-button color="#7232dd" type="danger" text="评论" @click="comment" />
+      </van-goods-action>
+
+
     </div>
   </div>
 </template>
@@ -38,7 +46,8 @@
   export default {
     data(){
       return{
-        name:"待评论订单"
+        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
+        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
       }
     },
     components: {
@@ -46,7 +55,7 @@
     },
     methods:{
       comment(){
-        this.$router.push({path:"/order/comment"})
+        this.$router.push({path:"/my"})
       }
     }
   }

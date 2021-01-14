@@ -1,62 +1,133 @@
 <template>
-  <div>
-    <nav-bar :name="name" :left="true"></nav-bar>
-
-    <div class="my">
-      <div class="photo">
-        <img src="./../../static/1.jpg">
+  <div class="center">
+    <van-nav-bar title="个人中心" />
+    <div class="center-info">
+      <div class="center-info-avatar">
+        <van-image
+          round
+          width="70px"
+          height="70px"
+          lazy-load
+          fit="cover"
+          src="http://agri.wuxiaohao.cn/avatar.png"
+        />
       </div>
-
-      <p class="name">昵称：<span>00000000</span></p>
-      <p class="userId">账号：<span>00000000</span></p>
-
-      <div class="do">
-        <div @click="oreder(1)"><img src="./../../static/1.jpg"><p>购物车</p></div>
-        <div @click="oreder(2)"><img src="./../../static/1.jpg"><p>未完成订单</p></div>
-        <div @click="oreder(3)"><img src="./../../static/1.jpg"><p>待评价</p></div>
-        <div @click="oreder(4)"><img src="./../../static/1.jpg"><p>全部订单</p></div>
+      <div class="center-info-name">
+        <p class="wechat-nickname">昵称: <span class="nickname">狂野男孩</span></p>
+        <p class="cumulative-income">累计收益: <span class="amount">1000.00</span></p>
       </div>
-
-      <div class="foot">
-        <ul>
-          <li>个人信息</li>
-          <li>关于我们</li>
-          <li>版本号 V 1.0</li>
-        </ul>
-      </div>
+      <div class="center-info-store"></div>
     </div>
-
-
-
-
-
-
-
-    <tabbar></tabbar>
+    <div class="center-statistics">
+      <van-grid :border="false" :column-num="3">
+        <van-grid-item icon="orders-o" text="订单明细" />
+        <van-grid-item icon="friends-o" text="团队" />
+        <van-grid-item @click="to('/field/favorites')" icon="star-o" text="收藏夹" />
+      </van-grid>
+    </div>
   </div>
 </template>
-
 <script>
-  import "./../assets/css/my.css"
-  import Tabbar from"./../components/Tabbar"
-  import NavBar from "../components/navBar";
-  export default {
-    data(){
-      return{
-        name:"我"
+export default {
+  name: "Center",
+  data() {
+    return {};
+  },
+  methods: {
+    to(path) {
+      this.$router.push(path);
+    },
+    toSettingStore() {
+      this.$router.push("/store");
+    },
+  },
+};
+</script>
+<style lang="less">
+.center {
+  &-info {
+    width: 98%;
+    height: 150px;
+    background-color: rgba(200, 150, 80, 0.7);
+    border-radius: 15px 15px 50% 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-avatar {
+      margin: 0 auto;
+    }
+    &-name {
+      margin: 0 auto;
+      margin-left: -5px;
+      color: #ffffff;
+      .wechat-nickname {
+        padding-top: 10px;
+        font-size: 14px;
+        .nickname {
+          font-size: 18px;
+          font-weight: bolder;
+        }
       }
-    },
-    components: {
-      NavBar,
-      Tabbar,
-    },
-    methods:{
-      oreder(i){
-        if(i ==1){this.$router.push({path:"/cart"})}
-        if(i ==2){this.$router.push({path:"/order/unfinshed"})}
-        if(i ==3){this.$router.push({path:"/order/uncomment"})}
-        if(i ==4){this.$router.push({path:"/order/all"})}
+      .cumulative-income {
+        padding-top: 5px;
+        font-size: 14px;
+        .amount {
+          font-size: 18px;
+          font-weight: bolder;
+        }
       }
     }
+    &-store {
+      margin: 0 auto;
+      margin-top: 20px;
+    }
   }
-</script>
+  &-statistics {
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 95%;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: -50px;
+    // &-balance {
+    //   width: 85%;
+    //   height: 50px;
+    //   margin: 0 auto;
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   .balance {
+    //     font-size: 14px;
+    //     color: #888888;
+    //     .amount {
+    //       font-size: 20px;
+    //       font-weight: bolder;
+    //       color: #555555;
+    //     }
+    //   }
+    // }
+    // &-income {
+    //   height: 80px;
+    //   margin: 0 auto;
+    //   text-align: center;
+    //   display: flex;
+    //   justify-content: space-around;
+    //   align-items: center;
+    //   .income-item {
+    //     .item-text {
+    //       font-size: 14px;
+    //       color: #888888;
+    //     }
+    //     .item-amount {
+    //       padding-top: 5px;
+    //       font-size: 20px;
+    //       font-weight: bolder;
+    //       color: #555555;
+    //     }
+    //   }
+    // }
+  }
+}
+</style>

@@ -1,7 +1,11 @@
 <template>
-  <div class="all">
+  <div class="all" :style="{ height: windowHeight + 'px' }">
 
-    <nav-bar :name="name"></nav-bar>
+    <van-nav-bar
+      title="所有订单"
+      left-arrow
+      @click-left="go"
+    />
 
     <div class="content">
       <ul class="good">
@@ -39,13 +43,17 @@
   export default {
     data(){
       return{
-        name:"全部订单"
+        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
+        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
       }
     },
     components: {
       navBar
     },
     methods:{
+      go(){
+        this.$router.push({path:"/my"})
+      }
     }
   }
 </script>

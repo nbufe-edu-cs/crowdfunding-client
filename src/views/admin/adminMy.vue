@@ -37,7 +37,7 @@
           </li>
         </ul>
       </div>
-    </ul>
+
   </div>
   <bottom-narbar :flag1="false"  :flag2="false"  :flag3="true"></bottom-narbar>
 </div>

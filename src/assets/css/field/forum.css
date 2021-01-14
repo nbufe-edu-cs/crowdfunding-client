@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.forum .top{
+  width: 100%;
+  height: 250px;
+
+}
+
+.forum .top .background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -100;
+}
+
+.forum .top .search{
+  z-index: 100;
+  height: 30px;
+  border: 1px solid black;
+  width: 90%;
+  margin: 10px auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.nut-icon{
+  margin-left: 8px;
+  display: block;
+}
+.forum .top .search input{
+  border: none;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.my-swipe{
+  width: 90%;
+  margin: 20px auto;
+}
+.my-swipe .van-swipe-item img{
+  height: 180px;
+
+}
+
+.forum .container{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.forum .container  li:nth-child(odd){
+ float: left;
+}
+
+.forum .container  li:nth-child(even){
+  float: right;
+}
+.forum .container  li:nth-child(2){
+  margin-top: 50px;
+}
+.forum .container li{
+  width: 45%;
+  margin-bottom: 20px;
+}
+.forum .container li img{
+  height:200px;
+  width: 100%;
+}
+.forum .container li .xin{
+  border: 1px solid black;
+  margin-top: -5px;
+  padding: 4%;
+}
+.forum .container li .xin .information{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.forum .container li .xin .user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.forum .container li .xin div{
+  display: flex;
+  align-items: center;
+}
+
+.forum .container li .xin .user span{
+  font-size: 12px;
+  margin-left: 5px;
+}
+.forum .container li:last-child{
+  margin-bottom: 60px;
+}

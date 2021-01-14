@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.order .return{
+  position: absolute;
+  left: 5%;
+  top: 0;
+}
+
+.order .van-nav-bar
+{
+  background-color: #f7f7f7;
+}
+
+
+.chooseAddress{
+  float: right;
+  height: 24px;
+  width: 24px;
+  transform: rotate(180deg);
+}
+
+.order .content{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.order .content .information{
+   background-color: #f2f2f2;
+   padding-top: 5px;
+   padding-bottom: 5px;
+ }
+
+.order .content .information .title{
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.order .content .information ul{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.order .content .information ul li{
+  line-height: 30px;
+  font-size: 15px;
+}
+
+
+.order .content .good .good-content{
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  position: relative;
+  display: -webkit-flex; /* Safari */
+  justify-content:flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.order .content .good img{
+  height: 100px;
+  width: 30%;
+  margin-left: 5%;
+}
+
+
+.order .content .good .detail{
+  height: 100px;
+  width: 50%;
+  margin-left: 8%;
+  font-size: 14px;
+}
+.order .content .good .detail  .name{
+  font-size: 18px;
+  line-height: 25px;
+}
+.order .content .good .detail li{
+  color: #8c8c8c;
+  line-height: 40px;
+}
+.order .content .good .detail li span{
+  float: left;
+}
+
+.order .content .good .price{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  font-size: 16px;
+  font-weight: bolder;
+  color: red;
+}
+
+
+
+.order .content .orderMessage{
+  margin-top: 20px;
+  background-color: #F2F2F2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+
+.order .content .orderMessage li{
+  width: 100%;
+  height: 24px;
+}
+
+.order .content .orderMessage li span{
+  float: left;
+  line-height: 24px;
+  margin-left: 5%;
+}
+.order .content .orderMessage li p{
+  float: left;
+  margin-left: 5%;
+  text-align: left;
+  line-height: 24px;
+}
+
+.order .content .submit-order{
+  margin-top: 10px;
+  width: 100%;position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: -webkit-flex; /* Safari */
+  justify-content:flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+.order .content .submit-order p{
+  margin-right: 5%;
+  font-size: 18px;
+}
+
+.order .content .submit-order p span{
+  color: red;
+  font-weight: bold;
+}
+.order .content .submit-order button{
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 30%;
+  line-height: 40px;
+  color: white;
+  background-color: #666666;
+}
+

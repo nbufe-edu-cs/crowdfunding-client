@@ -1,26 +1,36 @@
 <template>
 <div class="find">
 
-  <van-search
+  <nut-searchbar
     v-model="value"
-    show-action
-    placeholder="请输入搜索关键词"
-
-  />
+    placeText="请输入要搜索的内容"
+    :hasIcon="true"
+    :hasTextButton="true"
+    textInfo="搜索"
+    customClass="search_demo"
+    searchIconSize='14px'
+    @submit="onSearch"
+  ></nut-searchbar>
 
 </div>
 </template>
-
 <script>
-  import "./../assets/css/focus.css"
-  import "./../assets/js/focus"
   export default {
     data(){
       return{
         value:"",
       }
     },
-
+    methods:{
+      onSearch(){
+        this.$router.push({
+          path:"/findContainer",
+          query:{
+            value:this.value
+          }
+        })
+      }
+    }
 
   }
 </script>
@@ -31,17 +41,14 @@
   }
   .find{
     width: 90%;
-    margin: 5px auto;
+    margin: 10px auto ;
   }
-  .van-search__content{
-    height: 30px;
-    display: block;
-  }
-
-  .van-search .van-cell{
-    margin-top: 5px;
-    padding:0;
-  }
+.search_demo{
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
 
 
 </style>

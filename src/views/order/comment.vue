@@ -1,7 +1,11 @@
 <template>
-  <div class="comment">
+  <div class="comment" :style="{ height: windowHeight + 'px' }">
 
-    <nav-bar :name="name"></nav-bar>
+    <van-nav-bar
+      title="评论"
+      left-arrow
+      @click-left="comment"
+    />
 
     <div class="content">
       <ul class="good">
@@ -16,8 +20,9 @@
         </li>
       </ul>
       <textarea placeholder="请输入评论" v-bind="val"></textarea>
-
-      <button class="comment" @click="comment">评论</button>
+      <van-goods-action>
+        <van-goods-action-button color="#7232dd" type="danger" text="评论" @click="comment" />
+      </van-goods-action>
     </div>
   </div>
 </template>
@@ -28,7 +33,8 @@
   export default {
     data(){
       return{
-        name:"评论",
+        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
+        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
         val:""
       }
     },
@@ -37,7 +43,7 @@
     },
     methods:{
       comment(){
-        this.$router.push({path:"/my"})
+        this.$router.go(-1)
       }
     }
   }

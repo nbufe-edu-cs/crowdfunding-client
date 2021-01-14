@@ -1,7 +1,11 @@
 <template>
-  <div class="order">
-    <nav-bar :name="name" :left="true"></nav-bar>
 
+  <div class="order">
+    <van-nav-bar
+      title="所有订单"
+      left-arrow
+      @click-left="go"
+    />
     <div class="content">
 
       <ul class="address">
@@ -12,7 +16,7 @@
       <ul class="good">
         <li class="good-content">
           <img src="../../static/1.jpg">
-          <ul class="detail" >
+          <ul class="detailA" >
             <span class="name">商品名称</span>
             <li><span>规格：</span><p>5kg/箱</p></li>
             <li><span>单价：</span><p>￥29.9/箱</p></li>
@@ -24,7 +28,7 @@
 
         <li class="good-content">
           <img src="../../static/1.jpg">
-          <ul class="detail" >
+          <ul class="detailA" >
             <span class="name">商品名称</span>
             <li><span>规格：</span><p>5kg/箱</p></li>
             <li><span>单价：</span><p>￥29.9/箱</p></li>
@@ -42,41 +46,34 @@
         <li><span>备注： &#12288;&#12288;       </span><p>XXXXXXXXXX</p></li>
       </ul>
 
-      <div class="submit-order">
-        <p>合计：<span>￥59.8</span></p>
-        <button class="submit">提交订单</button>
-      </div>
-
+      <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit" />
     </div>
-    <tabbar></tabbar>
   </div>
 </template>
 
 <script>
   import "../assets/css/order.css"
-  import Tabbar from "../components/Tabbar";
-  import NavBar from "../components/navBar";
   export default {
     data(){
       return{
         name:"确认订单"
       }
     },
-    components: {
-      NavBar,
-      Tabbar,
 
-
-    },
     methods:{
-      returnback(){
-        this.$router.go(-1)
+      go(){
+        this.$router.push({
+          path:"/cart"
+        })
       },
       chooseAddress(){
         this.$router.push({
           path:"/addressList"
         })
       },
+      onSubmit(){
+
+      }
     }
   }
 </script>

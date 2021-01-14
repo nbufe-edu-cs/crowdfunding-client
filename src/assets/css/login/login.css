@@ -3,13 +3,15 @@
   padding: 0;
 }
 .login{
+  background-image: url("./../../../../static/bg.png");
   width: 100%;
   text-align: center;
-  color: white;
 }
+
 .login .title{
   margin-top: 60px;
 }
+
 .login ul{
   display: flex;
   display: -webkit-flex;
@@ -24,11 +26,9 @@
 }
 .login ul li button{
   border: none;
-  background-color: #666666;
   height: 48px;
   width: 200px;
   padding: 0 20px;
-
   border-radius: 50px;
   display: flex;
   align-items:center;
@@ -41,3 +41,15 @@
 }
 
 
+.login .iponeLogin button{
+  color: #89e4ff;
+  background-color: teal;
+}
+.login .weixinLogin button{
+  background-image: linear-gradient(to right,rebeccapurple , deepskyblue);
+  color: white;
+}
+.login .adminLogin button{
+  background-color: white;
+  color: black;
+}

@@ -1,15 +1,16 @@
 <template>
   <div class="login" :style="{ height: windowHeight + 'px' }">
-    <img  class="title" src="" style="width: 120px;height: 120px">
+    <img  class="title" src="./../../../static/login.png" style="width: 120px;height: 120px">
     <ul>
-      <li>
-        <button @click="wxLogin"><img src="#"></img>微信登录<div></div></button>
+
+      <li class="iponeLogin">
+        <button @click="iphoneLogin"><van-icon name="phone-o" size="24" color="white"/>手机号登录<div></div></button>
+      <li class="weixinLogin">
+        <button @click="wxLogin"><img src="./../../../static/weixin.png"></img>微信登录<div></div></button>
       </li>
-      <li>
-        <button @click="iphoneLogin"><img src="#"></img>手机号登录<div></div></button>
-      </li>
-      <li>
-        <button @click="adminLogin"><img src="#"></img>管理员登录<div></div></button>
+
+      <li class="adminLogin">
+        <button @click="adminLogin"><van-icon name="user-o" size="24" />管理员登录<div></div></button>
       </li>
     </ul>
   </div>

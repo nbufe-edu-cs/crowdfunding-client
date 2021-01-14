@@ -1,7 +1,11 @@
 <template>
-  <div class="unfinshed">
+  <div class="unfinshed" :style="{ height: windowHeight + 'px' }">
 
-    <nav-bar :name="name"></nav-bar>
+    <van-nav-bar
+      title="未完成订单"
+      left-arrow
+      @click-left="go"
+    />
 
     <div class="content">
       <ul class="good">
@@ -27,7 +31,9 @@
         </li>
 
       </ul>
-      <button class="pay" >付款</button>
+      <van-goods-action>
+        <van-goods-action-button color="#7232dd" type="danger" text="付款" @click="go" />
+      </van-goods-action>
     </div>
   </div>
 </template>
@@ -38,14 +44,17 @@
   export default {
     data(){
       return{
-        name:"未完成订单"
+        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
+        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
       }
     },
     components: {
       navBar
     },
     methods:{
-
+      go(){
+        this.$router.push({path:"/order"})
+      }
     }
 }
 </script>

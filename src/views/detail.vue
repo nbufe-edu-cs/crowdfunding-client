@@ -5,9 +5,10 @@
       <van-tab>
         <template #title name=""><img src="./../../static/left_arrow.png" class="left" @click="returnback"></template>
       </van-tab>
-      <van-tab title="商品" name="a">
 
+      <van-tab title="商品" name="a">
         <div class="container">
+
           <wc-swiper>
             <wc-slide>
               <img src="./../../static/1.jpg" style="width: 100%;height: 268px">
@@ -19,6 +20,7 @@
               <img src="./../../static/3.jpg" style="width: 100%;height: 268px">
             </wc-slide>
           </wc-swiper>
+
           <div class="information">
             <div class="title">
               【农产品众筹】沙地蜜薯（大果）4.5-5斤
@@ -26,7 +28,6 @@
             <div class="price">￥26.80</div>
           </div>
         </div>
-
 
 
         <div class="choose">
@@ -50,8 +51,10 @@
                 </div>
 
                 <div class="btn">
-                  <button @click="cart">加入购物车</button>
-                  <button @click="buy">立即购买</button>
+                  <van-goods-action>
+                    <van-goods-action-button color="#be99ff" type="warning" text="加入购物车" @click="cart" />
+                    <van-goods-action-button color="#7232dd" type="danger" text="立即购买" @click="buy" />
+                  </van-goods-action>
                 </div>
               </div>
             </van-action-sheet>
@@ -64,6 +67,12 @@
           </ul>
         </div>
       </van-tab>
+
+
+
+
+
+
       <van-tab title="详情" name="b">
         <div class="img">
         <ul>
@@ -152,20 +161,30 @@
           </ul>
 
       </van-tab>
-
       <van-tab>
+
         <template #title>    <div class="cart">
           <a class="navbar-link navbar-cart-link" href="/cart">
-            <svg class="cart-logo">
+            <svg class="cart-logo" style="width: 25px;height: 25px">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cart"></use>
             </svg>
           </a>
         </div></template>
       </van-tab>
     </van-tabs>
+
+
+
     <footer>
-      <button @click="cart">加入购物车</button>
-      <button @click="buy">立即购买</button>
+      <!--<button @click="cart">加入购物车</button>-->
+      <!--<button @click="buy">立即购买</button>-->
+      <van-goods-action>
+        <van-goods-action-icon icon="chat-o" text="客服" />
+        <van-goods-action-icon icon="shop-o" text="店铺" />
+        <van-goods-action-icon icon="star" text="已收藏" color="#ff5000"/>
+        <van-goods-action-button color="#be99ff" type="warning" text="加入购物车" @click="cart" />
+        <van-goods-action-button color="#7232dd" type="danger" text="立即购买" @click="buy" />
+      </van-goods-action>
     </footer>
 
     <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -179,6 +198,7 @@
         </symbol>
       </defs>
     </svg>
+
   </div>
 </template>
 

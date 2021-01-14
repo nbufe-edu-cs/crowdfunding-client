@@ -1,23 +1,29 @@
 <template>
   <div class="admin" >
-    <nav-bar :name="name" :left="true"></nav-bar>
+    <find></find>
+    <div>
+      <wc-swiper class="swiper">
+        <wc-slide>
+          <img src="./../../../static/1.jpg" style="width: 100%;height: 268px">
+        </wc-slide>
+        <wc-slide>
+          <img src="./../../../static/2.jpg" style="width: 100%;height: 268px">
+        </wc-slide>
+        <wc-slide>
+          <img src="./../../../static/3.jpg" style="width: 100%;height: 268px">
+        </wc-slide>
+      </wc-swiper>
+    </div>
 
-    <div class="container" :style="{ height: windowHeight-50 + 'px' }">
+    <div class="container">
+      <div class="title">众筹咨询</div>
       <ul>
-        <li>项目名称：&#12288;<input type="text"></li>
-        <li>项目信息：&#12288;<input type="text"></li>
-        <li>发起人信息：<input type="text" ></li>
-        <li>众筹数量：&#12288;<input type="text"></li>
-        <li>价格：&#12288;&#12288;&#12288;<input type="text"></li>
-        <nut-imagepicker
-          @imgMsg="imgMsg"
-          delMode="longtap"
-          :longTapTime="500"
-          :max="1"
-        >
-        </nut-imagepicker>
+        <li>XXXX公司 XX产品 众筹获利</li>
+        <li>XXXX地区农户靠众筹实现农产品品牌化</li>
       </ul>
-      <button  class="b" type="button">提交众筹申请</button>
+    </div>
+    <div class="submit">
+      <button  @click="submit">发起众筹</button>
     </div>
     <bottom-narbar :flag1="true"  :flag2="false"  :flag3="false"></bottom-narbar>
   </div>
@@ -26,24 +32,25 @@
 <script>
   import "./../../assets/css/admin/admin.css"
   import bottomNarbar from  "./../../components/bottomNarbar"
-  import navBar from "./../../components/navBar"
+  import Find from "./../../components/Find"
   export default {
     data(){
       return{
-        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
-        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
-        name:"发起众筹",
-        projcetName:"",
-        projectInfo:"",
-        imgMsg:""
+        value:""
       }
     },
     components: {
       bottomNarbar,
-      navBar
+      Find
     },
     methods:{
 
+      submit(){
+        this.$router.push({
+          path:"/admin/submit",
+
+        })
+      }
     }
   }
 </script>

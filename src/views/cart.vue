@@ -1,89 +1,119 @@
 <template>
-  <div>
-    <div class="top-title">购物车</div>
-    <div class="cart">
-      <div class="content">
+  <div class="cart">
+    <div class="title">
+      <div class="top-title">购物车</div>
+      <div class="small-title">共<span>{{totalNum}}</span>件宝贝
+      </div>
+    </div>
 
-        <div class="all-check">
-          <a href="#">
-            <van-checkbox :value="true"  icon-size="20"shape="square" @click="checkedAll">全选</van-checkbox>
-          </a>
+    <div class="container">
+      <div class="all-check">
+        <a href="#">
+          <van-checkbox :value="true"  icon-size="20"shape="square" @click="checkedAll">全选</van-checkbox>
+        </a>
+      </div>
+      <ul>
+
+        <div>
+          <nut-leftslip ref='demo1'>
+            <div slot="slip-main" class="slip-main">
+              <li>
+                <div class="left">
+                  <van-checkbox :value="checkedFlag" icon-size="18" @click="checked"></van-checkbox>
+                  <img src="./../../static/sort.png" class="photo">
+                  <div>
+                    <span>商品名称</span>
+                    <div class="old">￥39.9</div>
+                    <div class="new">￥29.9</div>
+                  </div>
+                </div>
+                <div class="num">
+                  <nut-stepper
+                    :value="num"
+                    :transition="false"
+                    :simple="false"
+                    :min="1"
+                    @add="add"
+                    @reduce="reduce"
+                  ></nut-stepper>
+                </div>
+              </li>
+
+
+            </div>
+            <div slot="slipbtns" class="slipbtns"><a href="javascript:;" @click="delSlipItem">删除</a><a href="javascript:;" class="favorite">收藏</a></div>
+          </nut-leftslip>
+
+          <nut-leftslip ref='demo1'>
+            <div slot="slip-main" class="slip-main">
+              <li>
+                <div class="left">
+                  <van-checkbox :value="checkedFlag" icon-size="18" @click="checked"></van-checkbox>
+                  <img src="./../../static/sort.png" class="photo">
+                  <div>
+                    <span>商品名称</span>
+                    <div class="old">￥39.9</div>
+                    <div class="new">￥29.9</div>
+                  </div>
+                </div>
+                <div class="num">
+                  <nut-stepper
+                    :value="num"
+                    :transition="false"
+                    :simple="false"
+                    :min="1"
+                    @add="add"
+                    @reduce="reduce"
+                  ></nut-stepper>
+                </div>
+              </li>
+
+
+            </div>
+            <div slot="slipbtns" class="slipbtns"><a href="javascript:;" @click="delSlipItem">删除</a><a href="javascript:;" class="favorite">收藏</a></div>
+          </nut-leftslip>
+
+          <nut-leftslip ref='demo1'>
+            <div slot="slip-main" class="slip-main">
+              <li>
+                <div class="left">
+                  <van-checkbox :value="checkedFlag" icon-size="18" @click="checked"></van-checkbox>
+                  <img src="./../../static/sort.png" class="photo">
+                  <div>
+                    <span>商品名称</span>
+                    <div class="old">￥39.9</div>
+                    <div class="new">￥29.9</div>
+                  </div>
+                </div>
+                <div class="num">
+                  <nut-stepper
+                    :value="num"
+                    :transition="false"
+                    :simple="false"
+                    :min="1"
+                    @add="add"
+                    @reduce="reduce"
+                  ></nut-stepper>
+                </div>
+              </li>
+
+
+            </div>
+            <div slot="slipbtns" class="slipbtns"><a href="javascript:;" @click="delSlipItem">删除</a><a href="javascript:;" class="favorite">收藏</a></div>
+          </nut-leftslip>
+
+
         </div>
 
-        <ul class="good">
-          <li class="distance">
-            <van-checkbox :value="checkedFlag" icon-size="20" @click="checked"></van-checkbox>
-            <img src="#" class="photo">
-            <ul>
-              <span>商品名称</span>
-              <li class="old">￥39.9</li>
-              <li class="new">￥29.9</li>
-            </ul>
 
-            <div class="num">
-              <nut-stepper
-                :value="num"
-                :transition="false"
-                :simple="false"
-                :min="1"
-                @add="add"
-                @reduce="reduce"
-              ></nut-stepper>
-            </div>
-          </li>
+      </ul>
 
-          <li class="distance">
-            <van-checkbox :value="checkedFlag" icon-size="20" ></van-checkbox>
-            <img src="#" class="photo">
-            <ul>
-              <span>商品名称</span>
-              <li class="old">￥39.9</li>
-              <li class="new">￥29.9</li>
-            </ul>
-
-            <div class="num">
-              <nut-stepper
-                :value="num"
-                :transition="false"
-                :simple="false"
-                :min="1"
-                @add="add"
-                @reduce="reduce"
-              ></nut-stepper>
-
-            </div>
-          </li>
-
-          <li class="distance">
-            <van-checkbox :value="checkedFlag" icon-size="20"></van-checkbox>
-            <img src="#" class="photo">
-            <ul>
-              <span>商品名称</span>
-              <li class="old">￥39.9</li>
-              <li class="new">￥29.9</li>
-            </ul>
-
-            <div class="num">
-              <nut-stepper
-                :value="num"
-                :transition="false"
-                :simple="false"
-                :min="1"
-                @add="add"
-                @reduce="reduce"
-              ></nut-stepper>
-            </div>
-          </li>
-
-          <button @click="goOrder">购买</button>
-        </ul>
-
-      </div>
+      <button @click="goOrder">购买</button>
+    </div>
 
 
-
-      <div class="interest">
-        <div class="title">
+    <div class="interest">
+        <div class="interest-title">
           <div></div>
           <span>推荐</span>
           <div></div>
@@ -108,9 +138,7 @@
 
         </ul>
       </div>
-
-    </div>
-    <tabbar></tabbar>
+    <tabbar :active2="1"></tabbar>
   </div>
 </template>
 
@@ -120,6 +148,7 @@
   export default {
     data(){
       return{
+        totalNum:"5",
         checked:"false",
         num:2,
         checkedAllFlag:false,
@@ -136,6 +165,11 @@
       Tabbar,
     },
     methods:{
+      delSlipItem(e) {
+        alert('确定删除吗？')
+        this.$refs.demo1.sliderEle.remove()
+      },
+
       checkedAll(){
         this.checkedAllFlag = !this.checkedAllFlag
         if(this.checkedAllFlag == true){

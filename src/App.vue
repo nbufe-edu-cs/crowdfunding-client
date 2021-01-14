@@ -1,13 +1,18 @@
 <template>
-    <router-view/>
+  <div>
+    <router-view />
+    <Tabbar :active2="2"></Tabbar>
+  </div>
 </template>
 
 <script>
+import Tabbar from "@/components/Tabbar";
 export default {
-  name: 'App'
-}
+  name: "App",
+  components: {
+    Tabbar,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

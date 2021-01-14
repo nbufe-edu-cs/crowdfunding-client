@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.furmDetail .top{
+  width: 100%;
+  height: 250px;
+
+}
+
+.furmDetail .top .background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -100;
+}
+
+.furmDetail .top .search{
+  z-index: 100;
+  height: 30px;
+  border: 1px solid black;
+  width: 90%;
+  margin: 10px auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.nut-icon{
+  margin-left: 8px;
+  display: block;
+}
+.furmDetail .top .search input{
+  border: none;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.my-swipe{
+  width: 90%;
+  margin: 20px auto;
+}
+.my-swipe  img{
+  height: 180px;
+}
+
+.furmDetail .container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.furmDetail .container .information{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.furmDetail .container .user{
+  display: flex;
+}
+
+.furmDetail .container .user .userImg{
+  height: 85px;
+  width: 85px;
+  margin: 0 5%;
+}
+
+.furmDetail .container .user .information  .name{
+
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.furmDetail .container .nei .information{
+  margin-top: 10px;
+}
+
+.furmDetail .comment{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.furmDetail .comment .title{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.furmDetail .comment  ul li{
+  display: flex;
+  margin-left: 5%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.furmDetail .comment  ul li .userImg{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.furmDetail .comment  ul li .userName{
+  font-size:14px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.furmDetail .comment  ul li .neirong{
+  font-size: 12px;
+}
+
+.furmDetail .comment  ul li .praise{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+}
+
+.furmDetail .comment  ul li .praise div:first-child{
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.furmDetail .comment  ul li .praise div span{
+  margin-left: 8px;
+}
+
+.van-field{
+  border: 1px black solid;
+}
+
+.furmDetail .comment .submit .btn{
+  text-align: center;
+}
+
+.furmDetail .comment .submit .btn button{
+  height: 48px;
+  width: 214px;
+  background-color: #354138;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}

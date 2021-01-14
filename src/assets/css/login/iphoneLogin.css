@@ -1,0 +1,37 @@
+.iphoneLogin{
+  background: url("./../../../../static/bg.png");
+}
+.iphoneLogin .return img{
+  height: 24px;
+  width: 24px;
+  margin-left: 2%;
+  margin-top: 5px;
+}
+.iphoneLogin .title{
+  width: 90%;
+  margin: 20px auto 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.iphoneLogin .van-form{
+  width: 90%;
+  margin: 0 auto;
+}
+.iphoneLogin .van-field{
+border-radius: 40px;
+}
+.iphoneLogin .forget{
+  float: right;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.iphoneLogin .qiehuan{
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+
+}
+.fanzhuan{
+}

@@ -1,55 +1,134 @@
-*{
-  margin: 0;
-  padding: 0;
+
+.my .container {
+    text-align: center;
+
 }
 
 
-.my{
-  padding: 5%;
-  margin: 10px auto;
-  text-align: center;
-}
-.my .photo img{
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-}
-.my .name{
-  margin-top: 20px;
-}
-.my .userId{
-  margin-top: 5px;
-  margin-bottom: 30px;
+.my .top {
+    width                     : 90%;
+    display                   : flex;
+    justify-content           : space-between;
+    align-items               : center;
+    padding-left              : 5%;
+    padding-right             : 5%;
+    border-bottom-right-radius: 1000%;
+    border-bottom-left-radius : 1000%;
+    background-image          : linear-gradient(to right, #aab6fe, #6a81e9);
+    height                    : 90px;
+    position                  : absolute;
 }
 
-.my  .do{
-  display: -webkit-flex; /* Safari */
-  justify-content:space-around;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
+.my .top .user {
+    width      : 50%;
+    height     : 100%;
+    padding-top: 25px;
+    display    : flex;
 }
 
-.my  .do img{
-  height: 50px;
-  width: 50px;
-  margin-bottom: 8px;
-}
-.my .foot ul{
-  margin-top:20px;
-  list-style: none;
-  text-align:left;
-}
-.my .foot ul li{
-  border: 2px solid gray;
-  line-height: 50px;
-  padding-left: 20px;
+.my .top .user .userImg {
+    width        : 50px;
+    height       : 50px;
+    border-radius: 25px;
+    margin-right : 5px;
 }
 
-.my .foot ul li:first-child{
-  border-bottom:none
+.my .top .user div {
+    color     : white;
+    text-align: center;
 }
-.my .foot ul li:last-child{
-  border-top:none;
-  margin-bottom: 60px;
+
+.my .top .user div p {
+    font-weight: bolder;
+}
+
+.my .top .user div button {
+    margin-top      : 8px;
+    border          : none;
+    background-color: rebeccapurple;
+    border-radius   : 10px;
+    font-size       : 10px;
+    height          : 25px;
+    width           : 100px;
+}
+
+.my .top .setting {
+    height        : 50px;
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+}
+
+.my .top .setting p {
+    color     : white;
+    font-size : 10px;
+    margin-top: 2px;
+}
+
+
+
+.my .container {
+    padding-top: 100px;
+    text-align : center;
+
+}
+
+.my .container .track {
+    display        : flex;
+    padding-top    : 10px;
+    padding-bottom : 10px;
+    padding-left   : 5%;
+    padding-right  : 5%;
+    justify-content: space-between;
+    font-size      : 15px;
+    margin-bottom  : 30px;
+    margin-top     : 10px;
+    border-bottom  : 1px black solid;
+    border-top     : 1px black solid;
+}
+
+
+
+
+.my .container .do {
+    padding-left   : 5%;
+    padding-right  : 5%;
+    display        : -webkit-flex;
+    /* Safari */
+    justify-content: space-around;
+    align-items    : center;
+    padding-top    : 8px;
+    padding-bottom : 8px;
+    font-size      : 14px;
+}
+
+.my .container .do img {
+    height       : 50px;
+    width        : 50px;
+    margin-bottom: 8px;
+}
+
+.my .container .foot {
+    padding-left : 5%;
+    padding-right: 5%;
+}
+
+
+
+.my .container .foot ul {
+    margin-top   : 40px;
+    list-style   : none;
+    text-align   : left;
+    margin-bottom: 60px;
+}
+
+.my .container .foot ul li {
+    border      : 2px solid gray;
+    line-height : 50px;
+    padding-left: 20px;
+}
+
+
+.my .container .foot ul li:nth-child(n+2) {
+    border-top: none;
 }

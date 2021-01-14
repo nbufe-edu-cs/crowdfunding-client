@@ -3,16 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
 import NutUI from "@nutui/nutui"
 import '@nutui/nutui/dist/nutui.css';
-
 import Vant from 'vant';
 import 'vant/lib/index.css';
-
 import wcSwiper from 'wc-swiper'
 import 'wc-swiper/style.css'
-
 
 Vue.config.productionTip = false
 

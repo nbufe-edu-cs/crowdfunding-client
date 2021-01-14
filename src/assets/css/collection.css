@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.collection{
+}
+
+.collection  .good{
+  background: white;
+  padding-top: 10px;
+}
+.collection  .good li{
+  width: 95%;
+  height: 110px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+
+.collection  .good img{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.collection  .good .title{
+  font-size: 18px;
+  width: 100%;
+}
+
+.collection  .good .right{
+  text-align: center;
+}
+.collection  .good .right .right-bottom{
+  display: flex;
+
+}
+.collection  .good .right .right-bottom .right-bottom-left {
+  width: 60%;
+}
+
+.collection  .good .right .right-bottom .right-bottom-right {
+  width: 40%;
+}
+

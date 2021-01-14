@@ -1,5 +1,7 @@
 <template>
   <div class="adminLogin" :style="{ height: windowHeight + 'px' }">
+    <div class="return"><a href="/login">返回</a></div>
+    <img src="./../../../static/login.png"  style="width: 120px;height: 120px">
     <div class="title">管理员登录</div>
     <div class="user">
       账户:<input type="text"  v-model="user"/>

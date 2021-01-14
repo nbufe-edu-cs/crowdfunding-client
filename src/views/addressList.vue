@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <nav-bar :name="name" :left="true"></nav-bar>
+  <div class="addressList" :style="{ height: windowHeight + 'px' }" style="background-image: url(./../../static/bg.png)">
+
+    <van-nav-bar
+      title="选择我的地址"
+      left-arrow
+      @click-left="back"
+    />
+
 
     <van-address-list
       v-model="chosenAddressId"
@@ -9,6 +15,7 @@
       default-tag-text="默认"
       @add="onAdd"
       @edit="onEdit"
+      @click-item="select"
     />
 
   </div>
@@ -20,6 +27,8 @@
     components: {NavBar},
     data() {
       return {
+        windowWidth: document.documentElement.clientWidth,  //实时屏幕宽度
+        windowHeight: document.documentElement.clientHeight,   //实时屏幕高度
         name:"选择我的地址",
         chosenAddressId: '1',
         list: [
@@ -41,12 +50,30 @@
       };
     },
     methods: {
+      back(){
+        this.$router.go(-1)
+      },
       onAdd() {
-        alert('新增地址');
+        this.$router.push({
+          path :"/addressList/addressEdit"
+          }
+        )
       },
       onEdit(item, index) {
-        alert('编辑地址:' + index);
+        this.$router.push({
+          path :"/addressList/addressEdit",
+          query:{
+            id:index
+          }
+        })
       },
+
+      select(item, index){
+        console.log(index)
+        console.log(item)
+      }
+
+
     },
   };
 </script>

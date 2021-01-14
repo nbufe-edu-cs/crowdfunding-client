@@ -8,10 +8,7 @@
   top: 0;
 }
 
-.order .van-nav-bar
-{
-  background-color: #f7f7f7;
-}
+
 
 
 .chooseAddress{
@@ -69,21 +66,23 @@
 }
 
 
-.order .content .good .detail{
+.order .content .good .detailA{
   height: 100px;
   width: 50%;
   margin-left: 8%;
   font-size: 14px;
 }
-.order .content .good .detail  .name{
+.order .content .good .detailA  .name{
   font-size: 18px;
   line-height: 25px;
 }
-.order .content .good .detail li{
+
+.order .content .good .detailA li{
   color: #8c8c8c;
-  line-height: 24px;
+  line-height: 22px;
+
 }
-.order .content .good .detail li span{
+.order .content .good .detailA li span{
   float: left;
 }
 
@@ -125,7 +124,7 @@
   line-height: 24px;
 }
 
-.order .content .submit-order{
+.order .content .submit-orderA{
   margin-top: 10px;
   width: 100%;
   display: -webkit-flex; /* Safari */
@@ -133,20 +132,9 @@
   flex-direction: row;
   align-items: center;
 }
-.order .content .submit-order p{
+.order .content .submit-orderA p{
   margin-right: 5%;
   font-size: 18px;
 }
 
-.order .content .submit-order p span{
-  color: red;
-  font-weight: bold;
-}
-.order .content .submit-order button{
-  border: 1px solid gray;
-  border-radius: 10px;
-  width: 30%;
-  line-height: 40px;
-  background-color: #ffffff;
-}
 
