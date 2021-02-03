@@ -14,14 +14,17 @@
       </div>
       <div class="center-info-name">
         <p class="wechat-nickname">昵称: <span class="nickname">狂野男孩</span></p>
-        <p class="cumulative-income">累计收益: <span class="amount">1000.00</span></p>
+        <div class="cumulative-income">
+          我的余额: <span class="amount">1000.00</span>
+          <a style="text-direction: none; color: #888888" href="">提现</a>
+        </div>
       </div>
       <div class="center-info-store"></div>
     </div>
     <div class="center-statistics">
       <van-grid :border="false" :column-num="3">
         <van-grid-item icon="orders-o" text="订单明细" />
-        <van-grid-item icon="friends-o" text="团队" />
+        <!-- <van-grid-item icon="friends-o" text="团队" /> -->
         <van-grid-item @click="to('/field/favorites')" icon="star-o" text="收藏夹" />
       </van-grid>
     </div>

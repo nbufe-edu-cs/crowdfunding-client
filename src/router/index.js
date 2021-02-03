@@ -45,6 +45,7 @@ import fieldForum from "./../views/field/forum"
 import fieldForumDetail from "./../views/field/forumDetail"
 import fieldMade from "./../views/field/made"
 import fieldFavorites from "@/views/favorites/index";
+import orderConfirm from "@/views/order/confirm";
 
 Vue.use(Router)
 
@@ -133,6 +134,11 @@ export default new Router({
             path: '/order',
             name: 'order',
             component: order
+        },
+        {
+            path: '/order/confirm',
+            name: orderConfirm,
+            component: orderConfirm
         },
         {
             path: '/order/all',

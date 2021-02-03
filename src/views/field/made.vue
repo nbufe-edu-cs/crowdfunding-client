@@ -4,14 +4,16 @@
       :title="land.landName + `土地定制`"
       left-text="返回"
       left-arrow
-      @click-left="go"
+      @click-left="$router.go(-1)"
     />
     <div class="message">
       <img :src="land.coverImg" />
       <div class="desc">
         {{ land.landDesc }}
       </div>
-      <div class="price">土地面积 {{ land.landArea }} 亩</div>
+      <div class="price">
+        土地面积 <span style="font-weight: 900">{{ land.landArea }}</span> 亩
+      </div>
     </div>
     <nut-progress
       class="zc-progress"
@@ -34,32 +36,27 @@
 
       <!--品种选择-->
       <div class="product-item" v-for="product in landProducts" :key="product.productId">
-        <nut-checkbox class="product-item-checkbox" v-model="checkbox"
+        <nut-checkbox class="product-item-checkbox" v-model="checkbox" disabled
           >{{ product.productName }} (单价 {{ product.price }})</nut-checkbox
         >
-        <nut-stepper
+        <van-stepper
           class="product-item-num"
-          :value="product.minNum"
-          :simple="false"
-          @change="changeProductNum()"
-        ></nut-stepper>
+          disable-input
+          v-model="product.recommendNum"
+          :min="product.minNum"
+          :max="product.maxNum"
+          @plus="addProductNum(product.price)"
+          @minus="minusProductNum(product.price)"
+        />
       </div>
-
       <div class="total-price">
-        <p>总计:</p>
-        <nut-price :price="totalPrice" :needSymbol="true" :thousands="false" />
+        <van-submit-bar
+          label="合计（含肥料费用）"
+          :price="totalPrice * 100"
+          button-text="立即参加"
+          @submit="participateCrowdfunfing()"
+        />
       </div>
-
-      <van-goods-action>
-        <van-goods-action-icon icon="chat-o" text="客服" @click="onClickIcon" />
-        <div @click="collect(collectionFlag)" v-bind:class="{ hide: !collectionFlag }">
-          <van-goods-action-icon icon="star" text="已收藏" color="#ff5000" />
-        </div>
-        <div @click="collect(collectionFlag)" v-bind:class="{ hide: collectionFlag }">
-          <van-goods-action-icon icon="star-o" text="收藏" />
-        </div>
-        <van-goods-action-button type="danger" text="定制" native-type="submit" />
-      </van-goods-action>
     </div>
   </div>
 </template>
@@ -68,27 +65,17 @@
 import "@/assets/css/field/made.css";
 import { GET } from "@/api/methods";
 import { LAND_DETAIL, LAND_MANAGE_MODE, LAND_PRODUCT } from "@/common/apiUrl";
-import axios from "axios";
 export default {
   data() {
     return {
-      checkbox: false,
-      mode: "false",
-      num: 0,
+      checkbox: true,
       landId: "",
       land: {},
       windowWidth: document.documentElement.clientWidth, //实时屏幕宽度
       windowHeight: document.documentElement.clientHeight, //实时屏幕高度
-      radio: "1",
-      value: "", //品种
-      showPicker: false,
-      date: "",
-      show: false,
       message: "",
-      collectionFlag: false,
       landManageMode: {},
       landProducts: [],
-      defaultValueData: null,
       totalPrice: 0,
     };
   },
@@ -96,6 +83,9 @@ export default {
     this.init();
   },
   methods: {
+    participateCrowdfunfing() {
+      this.$router.push("/order/confirm");
+    },
     init() {
       this.landId = this.$route.query.landId;
       const params = {
@@ -111,46 +101,35 @@ export default {
           this.landManageMode = res.data.data;
           this.totalPrice = this.landManageMode.price;
         } else {
-          this.$toast.fail("网络错误");
-        }
-      });
-      GET(LAND_MANAGE_MODE, params).then((res) => {
-        if (res.data.code == 200) {
-          this.landManageMode = res.data.data;
-          this.totalPrice = this.landManageMode.price;
-        } else {
-          this.$toast.fail("网络错误");
+          this.$toast.fail("服务器或网络错误");
         }
       });
       GET(LAND_PRODUCT, params).then((res) => {
         if (res.data.code == 200) {
           this.landProducts = res.data.data;
+          let tempTotalPrice = this.totalPrice;
+          tempTotalPrice = parseFloat(tempTotalPrice);
+          this.landProducts.forEach((product) => {
+            tempTotalPrice +=
+              parseFloat(product.recommendNum) * parseFloat(product.price);
+          });
+          this.totalPrice = tempTotalPrice;
         } else {
-          this.$toast.fail("网络错误");
+          this.$toast.fail("服务器或网络错误");
         }
       });
     },
-    changeProductNum() {},
-    go() {
-      this.$router.go(-1);
+    minusProductNum(price) {
+      let tempTotalPrice = this.totalPrice;
+      tempTotalPrice = parseFloat(tempTotalPrice);
+      tempTotalPrice -= parseFloat(price);
+      this.totalPrice = tempTotalPrice;
     },
-    onSubmit(values) {
-      console.log("submit", values);
-    },
-    onConfirm(value) {
-      this.value = value;
-      this.showPicker = false;
-    },
-    onClickIcon() {},
-    collect(flag) {
-      if (flag == true) {
-        //收藏失败
-        this.collectionFlag = false;
-      }
-      if (flag == false) {
-        //收藏成功
-        this.collectionFlag = true;
-      }
+    addProductNum(price) {
+      let tempTotalPrice = this.totalPrice;
+      tempTotalPrice = parseFloat(tempTotalPrice);
+      tempTotalPrice += parseFloat(price);
+      this.totalPrice = tempTotalPrice;
     },
   },
 };
@@ -159,7 +138,6 @@ export default {
 <style type="text/css">
 .van-field {
   border: none;
-  /*background-image: url("./../../../static/bg.png");*/
   font-size: 15px;
 }
 .zc-time {
